@@ -8,4 +8,5 @@ Route::namespace('Front')->name('front.')->group(function () {
 
     Route::get('/', 'HomeController@index')->name('index');
     Route::get('/posts/{id}', 'PostController@show')->name('show_post');
+    Route::get('/custom/{slug}', 'PageController@getPage')->name('get_page');
 });

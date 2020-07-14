@@ -1,4 +1,4 @@
-@extends('front.layout')
+@extends('front.layout', ['title' => 'Home'])
 
 @section('content')
 
