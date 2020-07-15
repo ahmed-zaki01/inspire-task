@@ -43,13 +43,13 @@
                     </a>
                 </li>
 
-                {{--
+
                 <li class="nav-item">
-                    <a href="{{route('dashboard.orders.index')}}" class="nav-link">
-                <i class="fas fa-shopping-cart"></i>
-                <p class="ml-1">@lang('site.orders')</p>
-                </a>
-                </li> --}}
+                    <a href="{{route('dashboard.pages.index')}}" class="nav-link">
+                        <i class="fas fa-file-alt"></i>
+                        <p class="ml-1">@lang('site.pages')</p>
+                    </a>
+                </li>
 
             </ul>
         </nav>

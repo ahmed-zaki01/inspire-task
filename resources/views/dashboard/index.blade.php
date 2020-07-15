@@ -37,9 +37,9 @@
                     <p>@lang('site.users')</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-ios-list-outline"></i>
+                    <i class="ion ion-ios-people"></i>
                 </div>
-                {{-- <a href="{{ route('dashboard.users.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> --}}
+                <a href="{{ route('dashboard.users.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -52,9 +52,9 @@
                     <p>@lang('site.posts')</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-laptop"></i>
+                    <i class="ion ion-ios-list-outline"></i>
                 </div>
-                {{-- <a href="{{ route('dashboard.products.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> --}}
+                <a href="{{ route('dashboard.products.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
