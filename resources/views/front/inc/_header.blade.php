@@ -16,7 +16,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Blog App</a>
+        <a class="navbar-brand" href="{{route('front.index')}}">{{ $settings->site_name }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,14 +26,13 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{route('front.index')}}">Home</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="cursor: pointer;" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        @foreach ($pages as $page)
-                        <a class="dropdown-item" href="{{route('front.get_page', $page->slug)}}">{{ucwords($page->title)}}</a>
-                        @endforeach
-                    </div>
+
+                @foreach ($pages as $page)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('front.get_page', $page->slug)}}">{{ucwords($page->title)}}</a>
                 </li>
+                @endforeach
+
             </ul>
 
         </div>

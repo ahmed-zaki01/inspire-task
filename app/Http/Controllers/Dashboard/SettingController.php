@@ -11,17 +11,17 @@ class SettingController extends Controller
     public function edit()
     {
         $setting = Setting::first();
-        //dd($setting);
+        // dd($setting);
         return view('dashboard.settings.edit', compact('setting'));
     } // end of edit
 
-    public function update(Request $request, Setting $setting)
+    public function update(Request $request, $id)
     {
         $data =  $request->validate([
             'site_name' => 'required|string|max:50'
         ]);
 
-        $setting->update($data);
+        Setting::where('id', $id)->update($data);
         session()->flash('status', 'Settings updated successfully!');
         return redirect(route('dashboard.index'));
     } // end of edit

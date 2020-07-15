@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mt-5">
+<div class="container mt-5" style="height: 80vh;">
     <div class="row">
 
         {{-- img, desc --}}

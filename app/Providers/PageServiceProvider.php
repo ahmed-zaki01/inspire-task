@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Page;
+use App\Setting;
 use Illuminate\Support\ServiceProvider;
 
 class PageServiceProvider extends ServiceProvider
@@ -17,7 +18,7 @@ class PageServiceProvider extends ServiceProvider
         // get custom page from db
         view()->composer('front.inc._header', function ($view) {
             $view->with('pages', Page::select('title', 'slug')->get());
-            //$view->with('settings', Setting::select('favicon', 'logo', 'alt_logo', 'name')->first());
+            $view->with('settings', Setting::select('site_name')->first());
         });
     }
 
