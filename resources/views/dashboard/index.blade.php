@@ -30,6 +30,22 @@
     <div class="row justify-content-center">
         <div class="col-lg-3 col-6">
             <!-- small box -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h3>{{ $posts }}</h3>
+
+                    <p>@lang('site.posts')</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-ios-list-outline"></i>
+                </div>
+                <a href="{{ route('dashboard.posts.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
             <div class="small-box bg-info">
                 <div class="inner">
                     <h3>{{ $users }}</h3>
@@ -43,21 +59,7 @@
             </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-                <div class="inner">
-                    <h3>{{ $posts }}</h3>
 
-                    <p>@lang('site.posts')</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-ios-list-outline"></i>
-                </div>
-                <a href="{{ route('dashboard.products.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-        <!-- ./col -->
     </div>
     <!-- /.row -->
     <!-- /.container-fluid -->
