@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'name' => 'test user',
+            'name' => 'test user two',
             'email' => 'usertwo@test.test',
         ]);
 

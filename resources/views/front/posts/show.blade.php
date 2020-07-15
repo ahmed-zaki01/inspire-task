@@ -8,9 +8,9 @@
         {{-- img, desc --}}
         <div class="col-md-6">
             <div>
-                <img src="{{url('uploads/posts').'/'.$post->img}}" alt="">
+                <img src="{{url('uploads/posts').'/'.$post->img}}" style="width: 500px; height: 350px;" alt="">
             </div>
-            <p class="pt-3 pb-5 text-info"> {{$post->desc}} </p>
+            <div class="pt-3 pb-4 text-info"> {!! $post->desc !!} </div>
         </div>
 
         {{-- title, date --}}

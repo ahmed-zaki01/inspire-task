@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $posts = Post::take(6)->orderBy('created_at', 'desc')->get();
+        $posts = Post::take(6)->orderBy('id', 'desc')->get();
         return view('front.index', compact('posts'));
     }
 }
