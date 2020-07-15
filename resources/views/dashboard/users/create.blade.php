@@ -13,7 +13,7 @@
         </div>
     </div> <!-- /.card-header -->
     <!-- form start -->
-    <form action="{{route('dashboard.users.store')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('dashboard.users.store')}}" method="POST">
         @csrf
         <div class="card-body">
 
@@ -32,7 +32,7 @@
                 <input type="text" name="phone" value="{{old('phone')}}" class="form-control" id="phone">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary text-uppercase font-weight-bold">Submit</button>
         </div>
         <!-- /.card-body -->
     </form>

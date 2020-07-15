@@ -17,7 +17,7 @@ class PostSeeder extends Seeder
                 Post::create([
                     "user_id" => "$i",
                     "title" => "post num $j user num $i",
-                    "short_desc" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolores maiores ex cum excepturi sed?",
+                    "short_desc" => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     "desc" => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa labore necessitatibus nemo at corrupti? Corrupti voluptates rerum laborum facere, id voluptas natus amet voluptate asperiores, dolorum nihil repellendus animi officiis?",
                     "img" => "$i$j.png",
                 ]);

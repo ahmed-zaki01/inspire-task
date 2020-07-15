@@ -16,5 +16,9 @@ Route::prefix('dashboard')->name('dashboard.')->group(function () {
 
         // routes of users
         Route::resource('users', 'UserController')->except(['show']);
+
+
+        // routes of posts
+        Route::resource('posts', 'PostController')->except(['show']);
     });
 });

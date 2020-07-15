@@ -33,7 +33,7 @@
                 <input type="text" name="phone" value="{{$user->phone}}" class="form-control" id="phone">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary text-uppercase font-weight-bold">Edit</button>
         </div>
         <!-- /.card-body -->
     </form>

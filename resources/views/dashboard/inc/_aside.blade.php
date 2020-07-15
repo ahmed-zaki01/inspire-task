@@ -36,18 +36,19 @@
                     </a>
                 </li>
 
-                {{-- <li class="nav-item">
-                    <a href="{{route('dashboard.products.index')}}" class="nav-link">
-                <i class="fas fa-tv"></i>
-                <p class="ml-1">@lang('site.products.products')</p>
-                </a>
+                <li class="nav-item">
+                    <a href="{{route('dashboard.posts.index')}}" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                        <p class="ml-1">@lang('site.posts')</p>
+                    </a>
                 </li>
 
+                {{--
                 <li class="nav-item">
                     <a href="{{route('dashboard.orders.index')}}" class="nav-link">
-                        <i class="fas fa-shopping-cart"></i>
-                        <p class="ml-1">@lang('site.orders')</p>
-                    </a>
+                <i class="fas fa-shopping-cart"></i>
+                <p class="ml-1">@lang('site.orders')</p>
+                </a>
                 </li> --}}
 
             </ul>

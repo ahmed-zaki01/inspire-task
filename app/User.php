@@ -12,4 +12,9 @@ class User extends Model
     {
         return $this->hasMany(Post::class);
     } // end of posts method
+
+    public function getNameAttribute($value)
+    {
+        return ucwords($value);
+    } // end of get name attribute
 }

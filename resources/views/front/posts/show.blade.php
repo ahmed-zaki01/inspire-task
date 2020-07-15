@@ -10,7 +10,7 @@
             <div>
                 <img src="{{url('uploads/posts').'/'.$post->img}}" alt="">
             </div>
-            <p class="pt-3 pb-5 text-info"> {{$post->desc}} </p>
+            <div class="pt-3 pb-4 text-info"> {!! $post->desc !!} </div>
         </div>
 
         {{-- title, date --}}

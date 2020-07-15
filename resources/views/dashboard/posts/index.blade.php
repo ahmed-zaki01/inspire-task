@@ -1,4 +1,4 @@
-@extends('dashboard.layout', ['title' => 'Users'])
+@extends('dashboard.layout', ['title' => 'Posts'])
 
 
 @section('content')
@@ -14,7 +14,7 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{route('dashboard.index')}}">Home</a></li>
-                    <li class="breadcrumb-item active">@lang('site.users')</li>
+                    <li class="breadcrumb-item active">@lang('site.posts')</li>
                 </ol>
             </div>
             <!-- /.col -->
@@ -25,45 +25,45 @@
 </div>
 <!-- /.content-header -->
 
-<!-- users table -->
+<!-- posts table -->
 <div class="card">
     <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">
 
-            <h3 class="card-title">@lang('site.users') Table - Total ({{$users->total()}})</h3>
-            <a href="{{route('dashboard.users.create')}}" class="btn btn-primary px-4"><i class="fa fa-plus"></i> Add</a>
+            <h3 class="card-title">@lang('site.posts') Table - Total ({{$posts->total()}})</h3>
+            <a href="{{route('dashboard.posts.create')}}" class="btn btn-primary px-4"><i class="fa fa-plus"></i> Add</a>
 
         </div>
         <!-- /.row -->
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        @if ($users->count())
+        @if ($posts->count())
         <table class="table table-hover text-center">
             <thead>
                 <tr>
                     <th style="width: 10px">#</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Short Description</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($users as $index => $user)
+                @foreach ($posts as $index => $post)
 
                 <tr>
                     <td class="table-col">{{$index + 1}}</td>
-                    <td class="table-col">{{$user->name}}</td>
-                    <td class="table-col">{{$user->email}}</td>
-                    <td class="table-col">@if ($user->phone) {{$user->phone}} @else <span class="text-gray">Doesn't have</span> @endif </td>
+                    <td class="table-col">{{$post->title}}</td>
+                    <td class="table-col"><img src="{{url('uploads/posts').'/'.$post->img}}" style="width: 100px; height: 75px;" alt=""></td>
+                    <td class="table-col">{{$post->short_desc}}</td>
 
 
-                    <td class="row justify-content-center align-items-center">
+                    <td class="row justify-content-center align-items-center" style="height: 100px;">
 
-                        <a href="{{route('dashboard.users.edit', $user->id)}}" class="btn btn-sm btn-info mr-2"><i class="fa fa-edit"></i> Edit</a>
+                        <a href="{{route('dashboard.posts.edit', $post->id)}}" class="btn btn-sm btn-info mr-2"><i class="fa fa-edit"></i> Edit</a>
 
-                        <form action="{{route('dashboard.users.destroy', $user->id)}}" method="post" class="mb-0">
+                        <form action="{{route('dashboard.posts.destroy', $post->id)}}" method="post" class="mb-0">
                             @csrf
                             @method('DELETE')
 
@@ -81,7 +81,7 @@
     </div>
     <!-- /.card-body -->
     <div class="card-footer clearfix">
-        {{ $users->links() }}
+        {{ $posts->links() }}
     </div>
 </div>
 
