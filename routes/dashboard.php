@@ -22,5 +22,12 @@ Route::prefix('dashboard')->name('dashboard.')->group(function () {
 
         // routes of pages
         Route::resource('pages', 'PageController')->except(['show']);
+
+        // routes of settings
+
+        Route::prefix('settings')->name('settings.')->group(function () {
+            Route::get('/edit', 'SettingController@edit')->name('edit');
+            Route::put('/update', 'SettingController@update')->name('update');
+        });
     });
 });

@@ -51,6 +51,15 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="{{route('dashboard.settings.edit')}}" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <p class="ml-1">@lang('site.settings')</p>
+                    </a>
+                </li>
+
+
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
