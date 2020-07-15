@@ -8,7 +8,7 @@
 
     <div class="card-header">
         <div class="d-flex justify-content-between">
-            <h3 class="card-title mt-2"><i class="fa fa-user mr-1"></i> New Post</h3>
+            <h3 class="card-title mt-2"><i class="fa fa-blog mr-1"></i> New Post</h3>
             <a href="{{url()->previous()}}" class="btn btn-default text-dark"><i class="fas fa-arrow-left mr-2"></i> Back</a>
         </div>
     </div> <!-- /.card-header -->
