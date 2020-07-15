@@ -13,5 +13,8 @@ Route::prefix('dashboard')->name('dashboard.')->group(function () {
     Route::middleware('admin_auth')->group(function () {
         Route::get('/', 'HomeController@index')->name('index');
         Route::get('/logout', 'HomeController@logout')->name('logout');
+
+        // routes of users
+        Route::resource('users', 'UserController')->except(['show']);
     });
 });

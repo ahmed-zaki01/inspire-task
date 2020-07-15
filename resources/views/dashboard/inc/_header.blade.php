@@ -24,8 +24,16 @@
     <link rel="stylesheet" href="{{asset('dashboard/css')}}/adminlte.min.css" />
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
+
+    <style>
+        .table-col {
+            vertical-align: middle !important;
+        }
+    </style>
     <!-- custom page style -->
     @yield('style')
+
+
 
 </head>
 

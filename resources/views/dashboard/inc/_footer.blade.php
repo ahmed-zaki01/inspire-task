@@ -25,6 +25,7 @@
 
 <!-- AdminLTE App -->
 <script src="{{asset('dashboard/js')}}/adminlte.min.js"></script>
+<script src="{{asset('dashboard/js')}}/script.js"></script>
 
 <!-- custom page script -->
 @yield('script')
