@@ -10,8 +10,8 @@
         <div class="container">
             {{-- intro of homepage --}}
             <h1 class="display-3 pt-5">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, voluptas similique esse facere natus sapiente voluptate dolores, doloribus eum voluptates quisquam facilis architecto. Nemo nihil suscipit impedit tempora tempore? Laudantium.</p>
+            <p><a class="btn btn-primary btn-lg" href="{{route('front.index')}}" role="button">Learn more »</a></p>
         </div>
 
         {{-- latest posts div --}}
