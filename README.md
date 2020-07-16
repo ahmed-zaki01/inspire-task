@@ -7,7 +7,7 @@ Simple blog task developed with laravel with dashboard to manage the app.
 -   clone the repo.
 -   run composer install command
 -   create .env file with the following instructions:
-    -   ASSET_URL=http://inspire-task.test/assets
+    -   ASSET_URL=your_base_url/assets
     -   DB_DATABASE=inspire_task
 -   run php artisan migrate --seed
 -   Now, Test!
