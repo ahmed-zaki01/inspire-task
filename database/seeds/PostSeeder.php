@@ -13,7 +13,7 @@ class PostSeeder extends Seeder
     public function run()
     {
         for ($i = 1; $i <= 3; $i++) {
-            for ($j = 1; $j <= 5; $j++) {
+            for ($j = 1; $j <= 1; $j++) {
                 Post::create([
                     "user_id" => "$i",
                     "title" => "post num $j user num $i",

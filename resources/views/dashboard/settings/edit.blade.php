@@ -26,6 +26,9 @@
 
             <div class="form-group">
                 <label>Select Menu Elements</label>
+
+                @if ($pages->count())
+
                 @foreach ($pages as $page)
 
                 <div class="form-check">
@@ -34,6 +37,9 @@
                 </div>
 
                 @endforeach
+                @else
+                <p>No pages added.</p>
+                @endif
             </div>
             <button type="submit" class="btn btn-primary text-uppercase font-weight-bold">Edit</button>
         </div>

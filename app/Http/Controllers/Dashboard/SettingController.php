@@ -25,13 +25,19 @@ class SettingController extends Controller
 
         foreach ($pages as $key => $page) {
 
-            // check if the page is selected
-            if (in_array($page->id, $selectedElements)) {
-                $page->update(['show' => 1]);
+            // check if there is no elements to show
+            if ($selectedElements) {
+                // check if the element is selected
+                if (in_array($page->id, $selectedElements)) {
+                    $page->update(['show' => 1]);
+                } else {
+                    $page->update(['show' => 0]);
+                }
             } else {
                 $page->update(['show' => 0]);
             }
         } // end of update menu foreach
+
 
         $data =  $request->validate([
             'site_name' => 'required|string|max:50'
