@@ -24,6 +24,17 @@
                 <input type="text" name="site_name" value="{{$setting->site_name}}" class="form-control" id="site_name" required>
             </div>
 
+            <div class="form-group">
+                <label>Select Menu Elements</label>
+                @foreach ($pages as $page)
+
+                <div class="form-check">
+                    <input type="checkbox" name="show[]" value="{{$page->id}}" class="form-check-input" id="{{str_replace(' ', '-', $page->title)}}" {{$page->show == 1 ? 'checked' : ''}}>
+                    <label class="form-check-label" for="{{str_replace(' ', '-', $page->title)}}">{{$page->title}}</label>
+                </div>
+
+                @endforeach
+            </div>
             <button type="submit" class="btn btn-primary text-uppercase font-weight-bold">Edit</button>
         </div>
         <!-- /.card-body -->

@@ -28,9 +28,11 @@
                 </li>
 
                 @foreach ($pages as $page)
+                @if ($page->show == 1)
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('front.get_page', $page->slug)}}">{{ucwords($page->title)}}</a>
                 </li>
+                @endif
                 @endforeach
 
             </ul>

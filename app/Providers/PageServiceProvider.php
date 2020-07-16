@@ -17,7 +17,7 @@ class PageServiceProvider extends ServiceProvider
     {
         // get custom page from db
         view()->composer('front.inc._header', function ($view) {
-            $view->with('pages', Page::select('title', 'slug')->get());
+            $view->with('pages', Page::select('title', 'slug', 'show')->get());
             $view->with('settings', Setting::select('site_name')->first());
         });
     }
